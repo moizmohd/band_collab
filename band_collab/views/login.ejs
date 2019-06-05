@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+  function getguitar()
+  {
+axios.get('http://localhost:3020/guitar')
+  .then(function (response) {
+    // handle success
+    
+    document.getElementById("bitch").innerHTML = response.data[0].city;
+    document.getElementById("bitch").innerHTML = response.data[0].city;
+    document.getElementById("bitch").innerHTML = response.data[0].city;
+    document.getElementById("bitch").innerHTML = response.data[0].city;
+    document.getElementById("bitch").innerHTML = response.data[0].city;
+    document.getElementById("bitch").innerHTML = response.data[0].city;
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
+  }
+  function getdrum()
+  {
+axios.get('http://localhost:3020/drum')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
+  }
+  function getbass()
+  {
+axios.get('http://localhost:3020/bass')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
+  }
+  function getvocals()
+  {
+axios.get('http://localhost:3020/vocals')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
+  }
+  function getkeyboard()
+  {
+axios.get('http://localhost:3020/keyboard')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
+  }</script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Logo</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        INSTRUMENTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#" onclick=getguitar()>GUITARISTS</a>
+        <a class="dropdown-item" href="#" onclick=getdrum()>DRUMMER</a>
+        <a class="dropdown-item" href="#" onclick=getbass()>BASS</a>
+        <a class="dropdown-item" href="#" onclick=getvocals()>VOCALS</a>
+        <a class="dropdown-item" href="#" onclick=getkeyboard()>KEYBOARDS</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<br>
+  
+<div id="bitch">
+  <h3></h3>
+  <p></p>
+</div>
+
+</body>
+</html>
