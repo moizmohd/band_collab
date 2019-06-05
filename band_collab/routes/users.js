@@ -65,8 +65,8 @@ else if (req.body.loguserName && req.body.logpassword){
                 return res.send("Wrong UserName or Password");
              }
             else{
-                //req.session.userId = userModel._id;
-                //return res.send("login");
+                
+                
                  res.render('login');
         
              }
@@ -93,6 +93,22 @@ else if (req.body.loguserName && req.body.logpassword){
 //         }
 //       });
 //   });
+// userModel.find()
+//                 .exec()
+//                 .then(array=>
+//                     {let citi = userModel.city;
+//                    // res.json(array).status(200);
+//                    res.render('login',{cities:citi});}
+            
+//                 )
+//                 //var logusername=req.body.loguserName;
+
+//                 //req.session.userId = userModel._id;
+//                 //return res.send("login");
+                
+//              }
+
+// });
 
 
 module.exports =router;
