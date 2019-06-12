@@ -15,8 +15,7 @@ const guitar=require('./routes/guitar');
 const drum=require('./routes/drum');
 const keyboard=require('./routes/keyboard');
 const vocals=require('./routes/vocals');
-const bass=require('./routes/bass');
-const event=require('./routes/event');  
+const bass=require('./routes/bass'); 
 var db = mongoose.connection;
 
 
@@ -67,7 +66,7 @@ app.use('/drum',drum);
 app.use('/keyboard',keyboard);
 app.use('/vocals',vocals);
 app.use('/bass',bass);
-app.use('/event',event)
+
 
 
     app.listen(port,function(){

@@ -66,13 +66,20 @@ else if (req.body.loguserName && req.body.logpassword){
              }
             else{
                 
-                
+                //var logusername=req.body.loguserName;
+
+                //req.session.userId = userModel._id;
+                //return res.send("login");
                  res.render('login');
         
              }
 
 });
 
+}
+
+else{
+    res.send("Please fill all the feilds");
 }
 
 
@@ -93,22 +100,6 @@ else if (req.body.loguserName && req.body.logpassword){
 //         }
 //       });
 //   });
-// userModel.find()
-//                 .exec()
-//                 .then(array=>
-//                     {let citi = userModel.city;
-//                    // res.json(array).status(200);
-//                    res.render('login',{cities:citi});}
-            
-//                 )
-//                 //var logusername=req.body.loguserName;
-
-//                 //req.session.userId = userModel._id;
-//                 //return res.send("login");
-                
-//              }
-
-// });
 
 
 module.exports =router;

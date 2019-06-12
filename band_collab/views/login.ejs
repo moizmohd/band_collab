@@ -14,7 +14,7 @@
       document.getElementById("data").innerHTML=""
     }
     function displayData(response)
-    {length=response.data.length;
+    {   length=response.data.length;
       for(var i=0;i<length;i++){
       
       // document.getElementById("username").innerHTML = response.data[i].username;
@@ -24,35 +24,40 @@
       // document.getElementById("genre").innerHTML = response.data[i].genre;
       // document.getElementById("level").innerHTML = response.data[i].level;
      
-       document.getElementById("data").innerHTML+=` 
-       <div class="container-fluid" style="border:5px solid black">
-       <div class="row">
-          <div class="col-sm-6" id="username"+ style="background-color:yellow;">${response.data[i].userName}</div>
-          <div class="col-sm-6" id="instrument"style="background-color:orange;">email:${response.data[i].email}</div>
-        </div>
-        <br>
-        
-        <div class="row">
-          <div class="col-sm" id="email" style="background-color:yellow;">instrument:${response.data[i].instrument}</div>
-   
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-sm" id="city" style="background-color:yellow;">city:${response.data[i].city}</div>
-          <div class="col-sm" id="genre" style="background-color:orange;">genre:${response.data[i].genre}</div>
-          <div class="col-sm" id="level" style="background-color:orange;">level:${response.data[i].level}</div>
-         
-        </div>
-        <br>
-     
-        </div>
-  
+  document.getElementById("data").innerHTML+=
+       
+       `
+       <div class="card-deck" style="width:25% ;float:left;margin-right:0px;margin-bottom:30px ">
+      <div class="card" >
+    <img class="card-img-top" src="https://www.kickassfacts.com/wp-content/uploads/2014/06/Bands.jpg"  style="width:100%">
+      <h4 class="card-title">${response.data[i].userName}</h4>
+      <p class="card-text">Instrument:${response.data[i].instrument}</p>
+      <p class="card-text">Genre:${response.data[i].genre}</p>
+      <p class="card-text">Level:${response.data[i].level}</p>
+    
       
+      
+      <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+    </div>
+  </div>
+</div>
+</div>
+  
       `
+
+
+
+
+
+
+
+
+
+
       // var data=document.createElement(a);
       // node.appendChild(data);
       // document.getElementById("data0").appendChild(node)
-      console.log(username);
+     // console.log(userName);
     
     }}
     function displayEventData(response)
@@ -67,7 +72,7 @@
       // document.getElementById("level").innerHTML = response.data[i].level;
      
        document.getElementById("data").innerHTML+=` 
-       <div class="container-fluid" style="border:5px solid black">
+       <div class="container-fluid" style="border:5px solid black ">
        <div class="row">
           <div class="col-sm-6" id="username"+ style="background-color:yellow;">${response.data[i].eventName}</div>
           <div class="col-sm-6" id="instrument"style="background-color:orange;">Place:${response.data[i].eventPlace}</div>
@@ -201,7 +206,8 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Logo</a>
+  <a class="navbar-brand" href="#">INDIKA
+  </a>
 
   <!-- Links -->
   <ul class="navbar-nav">
